@@ -122,13 +122,40 @@ class DoublyLinkedList {
             length--;
         }
 
-        Node* get(int index){
+        /*Node* get(int index){
             if(index<0||index>length){
                 return nullptr;
             }
             Node*temp=head;
-            for(int i=0;)
+            for(int i=0;i<index;i++){
+                temp=temp->next;
+            }
+            return temp;
         }
+
+        This above code can be a answer but we can write a better code with more faster convergence to index;
+        since we have prev n next pts we can divide the node into half nd if the index falls in first half we will use head to access it 
+        else we will use tail to access it 
+        */
+        Node* get(int index){
+            if(index<0 || index>length){
+                return nullptr;
+            }
+            Node* temp =head;
+            if(index<length/2){
+                for(int i=0;i<index;i++){
+                    temp=temp->next;
+                }
+            }
+            else{
+                temp=tail;
+                for(int i=length-1;i>(index);i--){
+                    temp=temp->prev;
+                }
+            }
+            return temp;
+        }
+
 };
 
 
