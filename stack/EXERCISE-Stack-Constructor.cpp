@@ -1,33 +1,40 @@
+/*
+Always make a stack with nullptr pointing out from the bottom most element and not the topmost
+look at it as if its a Linked list witht the null ptr pointing out from the bottom most node.
+Change the name of the pointer head and tail to top and bottom respectively and u dont even need bottom 
+only top pointer is enough.
+*/
+
 #include <iostream>
 
 using namespace std;
 
 
-	// CREATE NODE CLASS HERE //
-	//                        //
-	//                        //
-	//                        //
-	//                        //
-	////////////////////////////
+class Node{
+    public:
+        int value;
+        Node* next;
+        Node(int value){
+            this->value=value;
+            next=nullptr;
+        }
+};
 
 
 class Stack {
+    /*
+    classes are default pvt 
+    */
     private:
-		// CREATE MEMBER VARIABLES HERE //
-		//                              //
-		//                              //
-		//                              //
-		//                              //
-		//////////////////////////////////
-
+        Node* top;
+        int height;
     public:
-		// CREATE STACK CONSTRUCTOR HERE //
-		//                               //
-		//                               //
-		//                               //
-		//                               //
-		///////////////////////////////////
-		
+        Stack(int value){
+            Node* newNode=new Node(value);
+            top=newNode;
+            height=1;
+            
+        }
         ~Stack() {
             Node* temp = top;
             while (top) {
