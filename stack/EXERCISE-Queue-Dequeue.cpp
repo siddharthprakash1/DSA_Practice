@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<climits>
 using namespace std;
 
 
@@ -79,13 +79,23 @@ class Queue {
             length++;
         }
 
-        // WRITE DEQUEUE MEMBER FUCTION HERE //
-        //                                   //
-        //                                   //
-        //                                   //
-        //                                   //
-        //                                   //
-        ///////////////////////////////////////
+        int dequeue(){
+            if(length==0){
+                return INT_MIN;
+            }            
+            Node*temp=first;
+            int dequedValue=first->value;
+            if(length==1){
+                first=nullptr;
+                last=nullptr;
+            }
+            else{
+                first=first->next;
+            }
+            delete temp;
+            length--;
+            return dequedValue;
+        }
 
 };
 

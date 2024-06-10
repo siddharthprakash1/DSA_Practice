@@ -70,14 +70,17 @@ class Queue {
             if (length == 0) return true;
             return false;
         }
-
-        // WRITE ENQUEUE MEMBER FUCTION HERE //
-        //                                   //
-        //                                   //
-        //                                   //
-        //                                   //
-        //                                   //
-        ///////////////////////////////////////
+    void enqueue(int value){
+        Node* newNode=new Node(value);
+        if(length==0){
+            first=newNode;
+            last=newNode;
+        }else{
+        last->next=newNode;
+        last=newNode;
+        }
+        length++;
+    }
 
 };
 

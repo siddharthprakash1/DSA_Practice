@@ -56,9 +56,11 @@ class Stack {
             cout << "Height: " << height << endl;
         }
 
-    void(int value){
+    void push (int value){
         Node* newNode=new Node(value);
-        if()
+        newNode->next=top;
+        top=newNode;
+        height++;
     }
         
 };

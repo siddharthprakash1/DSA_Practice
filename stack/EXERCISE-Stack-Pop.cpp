@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include<climits>
 using namespace std;
 
 
@@ -73,13 +73,17 @@ class Stack {
             return INT_MIN;
         }
 
-        // WRITE POP MEMBER FUCTION HERE //
-        //                               //
-        //                               //
-        //                               //
-        //                               //
-        //                               //
-        ///////////////////////////////////
+        int pop(){
+            if(height==0){
+                return INT_MIN;
+            }
+            Node*temp=top;
+            int poppedvalue=top->value;
+            top=top->next;
+            delete temp;
+            height--;
+            return poppedvalue;
+        }
             
 };
 

@@ -3,31 +3,31 @@
 using namespace std;
 
 
-	// CREATE NODE CLASS HERE //
-	//                        //
-	//                        //
-	//                        //
-	//                        //
-	////////////////////////////
+class Node{
+    public:
+    int value;
+    Node* next;
+
+    Node(int value){
+        this->value=value;
+        next=nullptr;
+    }
+
+};
 
 
 class Queue {
     private:
-		// CREATE MEMBER VARIABLES HERE //
-		//                              //
-		//                              //
-		//                              //
-		//                              //
-		//////////////////////////////////
-
+        Node*first;
+        Node*last;
+        int length;
     public:
-		// CREATE QUEUE CONSTRUCTOR HERE //
-		//                               //
-		//                               //
-		//                               //
-		//                               //
-		///////////////////////////////////
-
+        Queue(int value){
+            Node* newNode=new Node(value);
+            first=newNode;
+            last=newNode;
+            length=-1;
+        }
         ~Queue() {
             Node* temp = first;
             while (first) {
