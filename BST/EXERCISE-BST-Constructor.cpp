@@ -3,31 +3,28 @@
 using namespace std;
 
 
-	// CREATE NODE CLASS HERE //
-	//                        //
-	//                        //
-	//                        //
-	//                        //
-	////////////////////////////
+class Node{
+    public:
+        int value;
+        Node* left;
+        Node* right;
+        Node(int value){
+            this->value=value;
+            left=nullptr;
+            right=nullptr;
+        }
+};
 
 
 class BinarySearchTree {
     public:
 		// CREATE MEMBER VARIABLE HERE //
-		//                             //
-		//                             //
-		//                             //
-		//                             //
-		/////////////////////////////////
-
+        Node* root;
     public:
 		// CREATE BST CONSTRUCTOR HERE //
-		//                             //
-		//                             //
-		//                             //
-		//                             //
-		/////////////////////////////////
-		
+        BinarySearchTree(){
+            root=nullptr;
+        }
 
 
         // ---------------------------------------------------
