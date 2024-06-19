@@ -37,7 +37,7 @@ class BinarySearchTree {
         }
 
         ~BinarySearchTree() { destroy(root); }
- 
+
 
         bool insert(int value) {
             Node* newNode = new Node(value);
@@ -64,13 +64,22 @@ class BinarySearchTree {
             }
         }
 
-        // WRITE CONTAINS MEMBER FUCTION HERE //
-        //                                    //
-        //                                    //
-        //                                    //
-        //                                    //
-        //                                    //
-        ////////////////////////////////////////
+    bool contains(int value){
+        if (root==nullptr){
+            return false;
+        }
+        Node* temp = root;
+        while (temp != nullptr) {
+            if (temp->value == value) {
+                return true;
+            } else if (value < temp->value) {
+                temp = temp->left;
+            } else {
+                temp = temp->right;
+            }
+        }
+        return false;
+    }
         
 };
 
