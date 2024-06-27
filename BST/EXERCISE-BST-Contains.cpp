@@ -65,9 +65,9 @@ class BinarySearchTree {
         }
 
     bool contains(int value){
-        if (root==nullptr){
-            return false;
-        }
+        //if (root==nullptr){
+            //return false;
+        //}
         Node* temp = root;
         while (temp != nullptr) {
             if (temp->value == value) {
