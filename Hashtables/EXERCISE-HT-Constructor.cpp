@@ -15,6 +15,8 @@ public:
     }
 };
 
+//if you have prime numbers you will have lesser collision 
+
 class HashTable {
 private:
     static const int SIZE = 7;
