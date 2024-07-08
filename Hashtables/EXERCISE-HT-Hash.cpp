@@ -25,12 +25,9 @@ class HashTable {
     	// HASH FUNCTION MUST BE PUBLIC FOR CODE IN MAIN TO WORK
     	
         // WRITE HASH MEMBER FUCTION HERE //
-        //                                //
-        //                                //
-        //                                //
-        //                                //
-        //                                //
-        ////////////////////////////////////  
+        int hash(string key){
+            
+        }
 
     public:
         // ---------------------------------------------------
