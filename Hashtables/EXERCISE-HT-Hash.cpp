@@ -26,7 +26,7 @@ class HashTable {
     	
         // WRITE HASH MEMBER FUCTION HERE //
         int hash(string key){
-            
+                
         }
 
     public:
