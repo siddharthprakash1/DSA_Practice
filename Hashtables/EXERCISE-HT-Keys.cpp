@@ -86,12 +86,20 @@ class HashTable {
         }
 
         // WRITE KEYS MEMBER FUCTION HERE //
-        //                                //
-        //                                //
-        //                                //
-        //                                //
-        //                                //
-        ////////////////////////////////////    
+        //This returns all keys in a vector form
+        vector<string>keys(){
+            vector<string> allKeys;
+            for(int i=0;i<SIZE;i++){
+                Node* temp=dataMap[i];
+                while(temp!=nullptr){
+                    allKeys.push_back(temp->key);
+                    temp=temp->next;
+                }
+            }
+            return allKeys;
+        }
+
+
 
 };
 
