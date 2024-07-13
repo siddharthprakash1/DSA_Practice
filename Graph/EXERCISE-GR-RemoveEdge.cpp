@@ -42,13 +42,12 @@ class Graph {
         }
 
         // WRITE REMOVEEDGE MEMBER FUNCTION HERE //
-        //                                       //
-        //                                       //
-        //                                       //
-        //                                       //
-        //                                       //
-        ///////////////////////////////////////////
-
+        bool removeEdge(string vertex1, string vertex2){
+            if (adjList.count(vertex1)!=0 && adjList.count(vertex2) !=0){
+            adjList.at(vertex1).erase(vertex2);
+            adjList.at(vertex2).erase(vertex1);
+            }
+        }
 };
 
 
