@@ -28,10 +28,37 @@ class Heap{
             heap.push_back(value);//this will add the value to the end of the heap
             int current=heap.size()-1;
             while (current>0 && heap[current]>heap[parent(current)]){ //dumb fuck the heap[current] give the value at the heap and make
-            //sure that the heap
+            //sure that the heap value of current is greater than the heap value of the parent only then perfrom the swap.
                 swap(current,parent(current));
                 current=parent(current);
             }
         }
+
+        void printHeap(){
+            cout<<"\n[";
+            for(size_t i=0;i<heap.size();i++){
+                cout << heap[i];
+                if(i<heap.size()-1){
+                    cout<<",";
+                }
+            }
+            cout <<"]"<<endl;
+        }
         
 };
+
+int main(){
+    Heap*myHeap=new Heap();
+    myHeap->insert(99);
+    myHeap->insert(72);
+    myHeap->insert(61);
+    myHeap->insert(58);
+    myHeap->printHeap();
+
+    myHeap->insert(100);
+    myHeap->printHeap();
+
+    myHeap->insert(75);
+    myHeap->printHeap();
+    
+}
