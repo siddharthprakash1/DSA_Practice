@@ -23,6 +23,25 @@ class Heap{
             heap[index1]=heap[index2];
             heap[index2]=temp;
         }
+        void sinkDown(int index){ //here the we can write nothing int index but we are writing as later it will be used in other funtion 
+            int maxIndex=index;
+            while(true){
+                int leftIndex=leftChild(index);
+                int rightIndex=rightChild(index);
+                if(heap[leftIndex]>heap[maxIndex] && heap[leftIndex]> heap[maxIndex]){
+                    maxIndex=leftIndex;
+                }
+                if(rightIndex<heap.size() && heap[rightIndex]>heap[maxIndex]){
+                    maxIndex=rightIndex;
+                }
+                if(maxIndex != index){
+                    swap(index,maxIndex);
+                    index=maxIndex;
+                }else{
+                    return;
+                }
+            }
+        }
     public:
         void insert(int value){
             heap.push_back(value);//this will add the value to the end of the heap
@@ -44,6 +63,7 @@ class Heap{
             }
             cout <<"]"<<endl;
         }
+        
         int remove(){
             if(heap.empty()){ //when the number of values is 0
                 return INT_MIN;
@@ -64,16 +84,19 @@ class Heap{
 
 int main(){
     Heap*myHeap=new Heap();
-    myHeap->insert(99);
-    myHeap->insert(72);
-    myHeap->insert(61);
-    myHeap->insert(58);
-    myHeap->printHeap();
-
-    myHeap->insert(100);
-    myHeap->printHeap();
-
+    myHeap->insert(95);
     myHeap->insert(75);
+    myHeap->insert(80);
+    myHeap->insert(55);
+    myHeap->insert(60);
+    myHeap->insert(50);
+    myHeap->insert(65);
+    myHeap->printHeap();
+
+    myHeap->remove();
+    myHeap->printHeap();
+
+    myHeap->remove();
     myHeap->printHeap();
     
 }
