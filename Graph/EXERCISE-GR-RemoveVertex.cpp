@@ -53,7 +53,7 @@ class Graph {
         // WRITE REMOVEVERTEX MEMBER FUNCTION HERE //
         bool removeVertex(string vertex){
             if(adjList.count(vertex)==0) return false;
-            for(auto otherVertex:adjList.at(vertex)){
+            for(auto otherVertex:adjList.at(vertex)){ //other vertex is the variable being used to loop through the unordered set
                 adjList.at(otherVertex).erase(vertex);
             }
             adjList.erase(vertex);
