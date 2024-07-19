@@ -82,3 +82,7 @@ Encapsulation is the idea of bundling data and methods that operate on that data
 within a class. We do this with the purpose of preventing anyone or anything outside of our class from being able to directly 
 access our data and to interact with it and to modify it.
  */
+
+/*
+Abstraction hiding  complex thing behind a procedure that make things looks simple
+*/
