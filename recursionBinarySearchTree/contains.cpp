@@ -81,7 +81,7 @@ static void test() {
         BinarySearchTree bst;
         int valueToSearch = 42;
         cout << "Searching for value " << valueToSearch
-             << " in an empty tree - EXPECTED: false\n";
+            << " in an empty tree - EXPECTED: false\n";
         cout << (bst.rContains(valueToSearch) ? "FAIL\n" : "PASS\n");
     }
 
