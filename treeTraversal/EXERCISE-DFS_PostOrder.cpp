@@ -120,7 +120,15 @@ class BinarySearchTree {
 		//                                           //
 		//                                           //
 		///////////////////////////////////////////////
-
+        void DFSPostOrder(Node* currentNode){
+            if(currentNode->left){
+                DFSPostOrder(currentNode->left);
+            }
+            if(currentNode->right){
+                DFSPostOrder(currentNode->right);
+            }
+            cout<<currentNode->value<<" ";
+        }
         void DFSPostOrder() { DFSPostOrder(root); }
 
 };
