@@ -107,6 +107,15 @@ class BinarySearchTree {
 		//                                          //
 		//                                          //
 		//////////////////////////////////////////////
+        void DFSPreOrder(Node* currentNode){
+            cout<<currentNode->value<<" ";
+            if(currentNode->left){
+                DFSPreOrder(currentNode->left);
+            }
+            if(currentNode->right){
+                DFSPreOrder(currentNode->right);
+            }
+        }
 
         void DFSPreOrder() { DFSPreOrder(root); }
 

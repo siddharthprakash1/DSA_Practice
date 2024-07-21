@@ -40,8 +40,6 @@ class BinarySearchTree {
         }
 
         ~BinarySearchTree() { destroy(root); }
- 
-
         void insert(int value) {
             Node* newNode = new Node(value);
             if (root == nullptr) {
@@ -83,11 +81,21 @@ class BinarySearchTree {
         }
 
 		// CREATE BFS MEMBER FUNCTION HERE //
-		//                                 //
-		//                                 //
-		//                                 //
-		//                                 //
-		/////////////////////////////////////
+		void BFS(){
+            queue<Node*>myQueue;
+            myQueue.push(root);
+            while(myQueue.size()>0){
+                Node*currentNode=myQueue.front();//a temp node to point at the root which will be used later in for traversal
+                myQueue.pop();
+                cout<<currentNode->value<<" ";
+                if(currentNode->left!=nullptr){
+                    myQueue.push(currentNode->left);
+                }
+                if(currentNode->right!=nullptr){
+                    myQueue.push(currentNode->right);
+                }
+            }
+        }
 
 };
 
