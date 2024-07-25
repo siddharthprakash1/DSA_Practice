@@ -9,21 +9,10 @@ using namespace std;
 	//                                    //
 	//                                    //
 	////////////////////////////////////////
-    void insertionSort(int array[], int size){
-        for(int i=0;i<size;i++){
-            int minIndex=i;
-            for(int j=i+1;j<size;j++){
-                if(array[j]<array[minIndex]){
-                    minIndex=j;
-                }
-            }
-            if(i!=minIndex){
-                int temp=array[i];
-                array[i]=array[minIndex];
-                array[minIndex]=temp;
-            }
-        }
+    void insertionSort(int array[],int size){
+        
     }
+
 
 
 int main() {
