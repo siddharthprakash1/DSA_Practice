@@ -9,7 +9,9 @@ using namespace std;
 	//                            //
 	//                            //
 	////////////////////////////////
- 
+    void merge(int array[],int leftIndex,int midIndex,int rightIndex){
+        
+    }
  
 int main() {
     
