@@ -30,7 +30,12 @@ int pivot(int array[], int pivotIndex, int endIndex) {
 	//                                //
 	//                                //
 	////////////////////////////////////
-
+void quickSort(int array[],int leftIndex, int rightIndex){
+    if(leftIndex>=rightIndex) return;
+    int pivotIndex=pivot(array,leftIndex,rightIndex);
+    quickSort(array,pivotIndex+1,rightIndex);
+    quickSort(array,leftIndex,pivotIndex-1);
+}
 
 
 int main() {
