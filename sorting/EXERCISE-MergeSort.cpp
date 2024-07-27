@@ -55,6 +55,13 @@ void merge(int array[], int leftIndex, int midIndex, int rightIndex) {
 	//                                //
 	////////////////////////////////////
 
+    void mergeSort(int array[], int leftIndex, int rightIndex) {
+        if(leftIndex >= rightIndex) return;
+        int midIndex = leftIndex + (rightIndex - leftIndex) / 2;
+        mergeSort(array, leftIndex, midIndex);  // Sort left half
+        mergeSort(array, midIndex + 1, rightIndex);  // Sort right half
+        merge(array, leftIndex, midIndex, rightIndex);  // Merge the sorted halves
+    }
 
 
 int main() {
