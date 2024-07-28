@@ -21,3 +21,6 @@ int main() {
     cout << "\n\nCounter: " << counter << endl;
     return 0;
 }
+
+//here but we are not using memoization 
+//downside to memoization is code becomes complex and the sapce complexity increases a lot
