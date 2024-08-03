@@ -17,6 +17,7 @@ int main() {
         int u, v;
         cin >> u >> v;
         adj[u].push_back(v);
+//here if the edge is directed then no need of adj[v].push_back(u) as u wont be the neighbour of v if unless specified
         adj[v].push_back(u);
     }
 
